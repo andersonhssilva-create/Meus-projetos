@@ -47,6 +47,7 @@ public class game {
                     break;
                 case 2: 
                     break;
+
             }
         }
     }

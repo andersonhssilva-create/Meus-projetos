@@ -1,32 +1,53 @@
 package twentyOne;
 
-import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 
-class teste {
-    public static void main(String[] args) {
+public class game {
+    public static void partida(String[] args) {
         Scanner scan = new Scanner(System.in);
         Random rng = new Random();
-        ArrayList<Integer> deckOuros = new ArrayList<>();
-        ArrayList<Integer> deckCopas = new ArrayList<>();
-        ArrayList<Integer> deckEspadas = new ArrayList<>();
-        ArrayList<Integer> deckPaus = new ArrayList<>();
+        ArrayList<Integer> deck = new ArrayList<>();
+        ArrayList<Integer> nOuros = new ArrayList<>();
+        ArrayList<Integer> nCopas = new ArrayList<>();
+        ArrayList<Integer> nEspadas = new ArrayList<>();
+        ArrayList<Integer> nPaus = new ArrayList<>();
+        ArrayList<Integer> dealerHand = new ArrayList<>();
+        ArrayList<Integer> yourHand = new ArrayList<>();
         
 
-        for (int O = 1; O < 13; O++) {
-            deckOuros.add(O);
+     for (int O = 1; O <= 13; O++) {
+            nOuros.add(O);
         }
-        for (int C = 1; C < 13; C++) {
-            deckCopas.add(C);
+        for (int C = 1; C <= 13; C++) {
+            nCopas.add(C);
         }
-        for (int E = 1; E < 13; E++) {
-            deckEspadas.add(E);
+        for (int E = 1; E <= 13; E++) {
+            nEspadas.add(E);
         }
-        for (int P = 1; P < 13; P++) {
-            deckPaus.add(P);
+        for (int P = 1; P <= 13; P++) {
+            nPaus.add(P);
         }
-        int dh = 100;
-        int yh = 200;
+        deck.addAll(nOuros);
+        deck.addAll(nCopas);
+        deck.addAll(nEspadas);
+        deck.addAll(nPaus);
+
+        int aa = 0;
+        if (aa != 1) {
+            System.out.println("mão do dealer: "+ dealerHand);
+            System.out.println("Sua mão: "+ yourHand);
+            switch (scan.nextInt()) {
+                System.out.println(" 1= Comprar\n 2= Ficar");
+                case 1: 
+                System.out.println("Você comprou uma carta" +deck.get (rng.nextInt (deck.size())));
+                String comprar = deck.get();
+                String converter = deck.remove(rng.nextInt(deck.size()));
+                    break;
+                case 2: 
+                    break;
+            }
+        }
     }
 }
